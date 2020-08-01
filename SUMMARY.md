@@ -4,13 +4,13 @@
 
 ## Software
 
-* [Untitled](software/untitled.md)
+* [LAMP stack](software/untitled.md)
 
 ## Hardware
 
-* [Untitled](hardware/untitled.md)
+* [Raspberry Pi](hardware/untitled.md)
 
 ## Networking
 
-* [Untitled](networking/untitled.md)
+* [PFSense](networking/untitled.md)
 
