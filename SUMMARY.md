@@ -1,4 +1,16 @@
 # Table of contents
 
-* [Web server \(LAMP\)](README.md)
+* [Web Server \(LAMP\)](README.md)
+
+## Software
+
+* [Untitled](software/untitled.md)
+
+## Hardware
+
+* [Untitled](hardware/untitled.md)
+
+## Networking
+
+* [Untitled](networking/untitled.md)
 

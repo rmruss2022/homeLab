@@ -2,7 +2,7 @@
 description: 'Web server to control lights, thermostat, and security systems'
 ---
 
-# Web server \(LAMP\)
+# Web Server \(LAMP\)
 
 ## Getting Super Powers
 
