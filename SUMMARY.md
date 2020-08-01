@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Web Server \(LAMP\)](README.md)
+* [Overview](README.md)
 
 ## Software
 
