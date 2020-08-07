@@ -14,7 +14,7 @@ I began my interest with smart home applications of a homelab. My goal was to ag
 
 ## Limitations
 
-Before I discuss my findings, it is important to understand and respect the limitations of smart home technology for different types of people. In my case, I live with  
+Before I discuss my findings, it is important to understand and respect the limitations of smart home technology for varying use cases. I live with three roommates, so when I started planning the technology to integrate into the house, I had to keep the privacy of my roommates in mind.      
 
 
 
