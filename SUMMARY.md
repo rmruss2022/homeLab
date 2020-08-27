@@ -8,7 +8,7 @@
 
 ## Hardware
 
-* [Hardware overview](hardware/untitled.md)
+* [Hardware overview](hardware/hardwave-overview.md)
 
 ## Networking
 
