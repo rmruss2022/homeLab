@@ -4,3 +4,6 @@
 [submodule "software/homeLab-Flask-API"]
 	path = software/homeLab-Flask-API
 	url = https://github.com/rmruss2022/homeLab-Flask-API.git
+[submodule "software/homeLab-thermostat"]
+	path = software/homeLab-thermostat
+	url = https://github.com/rmruss2022/homeLab-thermostat.git
