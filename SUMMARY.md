@@ -8,7 +8,7 @@
 
 ## Hardware
 
-* [Raspberry Pi](hardware/untitled.md)
+* [Hardware overview](hardware/untitled.md)
 
 ## Networking
 
