@@ -1,3 +1,6 @@
 [submodule "software/homeLab-LAMP-Webserver"]
 	path = software/homeLab-LAMP-Webserver
 	url = https://github.com/rmruss2022/homeLab-LAMP-Webserver.git
+[submodule "software/homeLab-Flask-API"]
+	path = software/homeLab-Flask-API
+	url = https://github.com/rmruss2022/homeLab-Flask-API.git
