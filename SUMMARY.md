@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Welcome to Matt's Home Automation!](README.md)
 
 ## Software
 

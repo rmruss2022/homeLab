@@ -1,10 +1,11 @@
 ---
 description: >-
-  Describe the goals and functionality of the homelab - a sandbox that you can
-  learn and play with new or unfamiliar technologies
+  ATTENTION! Go to https://russellm22.gitbook.io/homelab/ for documentation!
+  Hello there! Welcome to Matt's homelab automation documentation. Here I will
+  explain the purpose and functionality of my work
 ---
 
-# Overview
+# Welcome to Matt's Home Automation!
 
 {% tabs %}
 {% tab title="Lighting Front End" %}
@@ -19,6 +20,12 @@ description: >-
 ![](.gitbook/assets/img-8357.jpg)
 {% endtab %}
 {% endtabs %}
+
+
+
+
+
+
 
 ## Smart Home Data 
 
