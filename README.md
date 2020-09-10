@@ -7,6 +7,18 @@ description: >-
 
 # Welcome to Matt's Home Automation!
 
+### The Inspiration
+
+Towards the end of my sophmore year, I started an interest in the HomeLab subreddit. People had grandious racks of servers and networking equipment that blew my software limited mind. I decided to embark on my own homelab journey by building out a custom home automation system.     
+
+### Beginnings
+
+I began outlining the functionality I wanted control, and narrowed my focus to lighting, temperature, and security. In hindsight, the homelab subreddit created a slightly misleading idea of what processing power was necessary for this project. I bought a Dell T420 PowerEdge Server, Router, Switch, and Wirless Access Point to understand the secrets behind these homelab-er's enterprise networking setups. 
+
+![Dell T420 PowerEdge](.gitbook/assets/mydellpic.jpg)
+
+Now I was ready to rock - I installed pfSense on my router and went to work setting DHCP services, creating VLAN's for my Wifi, setting up a VPN for some VLAN's, perfecting firewall rules, and securing my network with Suricata IDS \(Intrusion Detection System\). 
+
 {% tabs %}
 {% tab title="Lighting Front End" %}
 ![](.gitbook/assets/img-8332.jpg)
