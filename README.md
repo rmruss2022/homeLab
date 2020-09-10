@@ -15,9 +15,19 @@ Towards the end of my sophmore year, I started an interest in the HomeLab subred
 
 I began outlining the functionality I wanted control, and narrowed my focus to lighting, temperature, and security. In hindsight, the homelab subreddit created a slightly misleading idea of what processing power was necessary for this project. I bought a Dell T420 PowerEdge Server, Router, Switch, and Wirless Access Point to understand the secrets behind these homelab-er's enterprise networking setups. 
 
-![Dell T420 PowerEdge](.gitbook/assets/mydellpic.jpg)
+![R.I.P Dell T420 PowerEdge](.gitbook/assets/mydellpic.jpg)
 
-Now I was ready to rock - I installed pfSense on my router and went to work setting DHCP services, creating VLAN's for my Wifi, setting up a VPN for some VLAN's, perfecting firewall rules, and securing my network with Suricata IDS \(Intrusion Detection System\). 
+Now I was ready to rock - I installed pfSense on my router and went to work creating VLAN's for my Wifi, setting up a VPN for some VLAN's, perfecting firewall rules, and securing my network with Suricata IDS \(Intrusion Detection System\). 
+
+Initially, I set up Proxmox virtualization software on the PowerEdge. I planned to set up my home automation web server on one virtual machine and separate other envioronments for a Python cryptocurrency trading bot and Plex Media Server. While I learned a lot about iDRAC and virtualization, it proved unnecessary long term. I transferred my webserver to a Raspberry Pi 4 and suffered no loss of performance. 
+
+### LAMP Web Server
+
+I knew I wanted my own system  
+
+### Let There Be LIGHT!
+
+The first application of any self-respecting home automation system has to be lighting.  
 
 {% tabs %}
 {% tab title="Lighting Front End" %}
