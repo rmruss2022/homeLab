@@ -4,7 +4,7 @@
 
 ## Software
 
-* [LAMP stack](software/untitled.md)
+* [Software Documentation](software/untitled.md)
 
 ## Hardware
 

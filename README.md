@@ -29,6 +29,14 @@ After a fair amount of research into standard home automation software such as H
 
 The first application of any self-respecting home automation system has to be lighting.  
 
+### Picking a Thermostat
+
+While there are many smart thermostats on the market, I needed an API versatile enough to fit into my ecosystem. Unfortunately, I could not find a suitable candidate within a reasonable price range. Going forward with the theme of this project - I had to make my own. 
+
+### Smart Lock Say What?
+
+
+
 {% tabs %}
 {% tab title="Lighting Front End" %}
 ![](.gitbook/assets/img-8332.jpg)
