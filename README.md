@@ -9,7 +9,7 @@ description: >-
 
 ### Introduction 
 
-Towards the end of my second year, I began an interest in the HomeLab subreddit. I wanted to learn more about networking and devlope a system I could experiment with new technologies. Unsure of where exactly to begin, I looked towards the most obvious and exciting option: home automation. Throughout the summer, I built open source solutions for lighting, temperature control, and security while learning about the psychological applications this data generates. 
+Towards the end of my second year, I began an interest in the HomeLab subreddit. I wanted to learn more about networking and devlop a system I could experiment with new technologies. Unsure of where exactly to begin, I looked towards the most obvious and exciting option: home automation. Throughout the summer, I built open source solutions for lighting, temperature control, and security while learning about the psychological applications this data generates. 
 
 ### Stack
 
