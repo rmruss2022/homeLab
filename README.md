@@ -31,11 +31,15 @@ These specifications led me to a LAMP \(Linux, Apache, MySQL, PHP\) webserver. T
 
 ### Thermostat
 
+* rp4 with temperature sensor wired to the ac
+* made calls to flask api to check if user set temperature within period of time
+* if no user temp, went off a hardcoded value
+
 While there are many smart thermostats on the market, I needed an API versatile enough to fit into my ecosystem. Unfortunately, I could not find a suitable candidate within a reasonable price range. Therefore, I was left to create my own. I researched the wiring for my AC system, and wiried a relay switch 
 
 ### Sensors
 
-limsum
+Sensors connected to the door log activity entering/leaving to the MySQL database.
 
 
 
