@@ -13,17 +13,21 @@ Towards the end of my second year, I began an interest in the HomeLab subreddit.
 
 ### Stack
 
-There are many players in the home automation market offering their own neuonced ecosystem. Amazon, Google, and Apple offer top tier software, device compatibility, and voice assistant, but lack developer control. They are centralized services that work out of the box, and for most consumers that is the best option. Open source services such as Home Assistant or OpenHab offer a more plug and play format that offers high compatibility while also letting the user    
+There are many players in the home automation market offering their own nuanced ecosystem. Amazon, Google, and Apple offer top tier software, device compatibility, and voice assistant, but lack developer control. They are centralized services that work out of the box, and for most consumers, that is the best option. Open source services such as Home Assistant or OpenHab offer a plug and play format that offers high compatibility while also giving the user more control over the tech. These great solutions inspired the functionality and design I wanted out of my system.
 
-
-
-After a fair amount of research into standard home automation software such as Home Assistant, OpenHab, Control 4, etcetera, I developed an understanding for front end layouts and integration of third-party devices. More importantly, I decided on a LAMP \(Linux, Apache, MySQL, PHP\) stack to build-out my own system.  
+These specifications led me to a LAMP \(Linux, Apache, MySQL, PHP\) webserver. This traditional stack allowed me to control my devices from a web page anyone on the network/wifi could access. There was no separate app that would eliminate desktop access or necessitate my roommates to download \(further splitting into iOS/Android\). There was just a local IP that could be saved to any phone home screen. 
 
 ### Lighting
 
-The first application of any self-respecting home automation system has to be lighting.  
+* hue lights
+* php http curl requests
+* load, off/on, brightness, scene
 
 ### Security
+
+* rf lock
+* rp4 flask api receives call from web server
+* circuit - optoisolator connects to remote to turn on button when signal received from api 
 
 ### Thermostat
 
