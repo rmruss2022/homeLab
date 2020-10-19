@@ -90,7 +90,7 @@ def unlock():
     GPIO.cleanup()
 ```
 
-Here the Pi sets a GPIO pin output to high and triggers the remote.  
+Here the Pi sets a GPIO pin output to high and triggers the remote. In this way, I was able to control the RF Deadbolt from the web-server.
 
 ### Thermostat
 
