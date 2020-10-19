@@ -54,7 +54,43 @@ This PHP code is a basic cURL which returns the data from the Hue API URL specif
 * rp4 flask api receives call from web server
 * circuit - optoisolator connects to remote to turn on button when signal received from api 
 
-To automate the security of my house, I first wanted to control my door lock. After researching different wifi solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I found a Radio Frequency Deadbolt that could be controlled from a small remote.   
+To automate the security of my house, I first wanted to control my door lock. After researching different wifi solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I came across Morning Industry - they manufacture a Radio Frequency Deadbolt that could be controlled from a small remote. I theorized I could control the remote with my Raspberry Pi, but I had to create some circuit to interface between the two.  
+
+![](.gitbook/assets/circuitimg.jpg)
+
+The remote button is activated when two pins are connected, so I soldered two wires to the respective pins \(blue and orange wires\) and connected the opposite end to an optoisolator on my breadboard. When the optoisolator receives power, \(red wire - white is connected to ground\) the connection between the output pins are completed, connecting the orange and blue wires and activating the remote to open the door. 
+
+The hardware is done, but this Pi needs to open a means of communication with the web-server. Therefore, I created a Flask API where I could receive requests and activate the remote. Flask is a micro web framework, perfect for my needs to send data back and forth. As seen in the front end image, the lock at the bottom of the screen sends an AJAX request.
+
+```text
+$.ajax({
+    url:"http://192.168.6.37:5000/smartlock", 
+    data: { }, //SET PARAM1 TO GROUP ID
+    type: "GET",
+    context: document.body
+}).done(function(result) {
+    alert(result)
+});
+```
+
+The AJAX code sends a get request to the Flask API: 
+
+```text
+class smartlock(Resource):
+    def get(self):
+        unlock()
+        return jsonify({"get request" : "smart lock api"})
+
+def unlock():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(24, GPIO.OUT) #led to gpio24
+    GPIO.output(24, GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(24, GPIO.LOW)
+    GPIO.cleanup()
+```
+
+Here the Pi sets a GPIO pin output to high and triggers the remote.  
 
 ### Thermostat
 
