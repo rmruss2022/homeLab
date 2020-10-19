@@ -23,6 +23,8 @@ These specifications led me to a LAMP \(Linux, Apache, MySQL, PHP\) webserver. T
 * php http curl requests
 * load, off/on, brightness, scene
 
+There are many options on the wifi lightbulb market, but I stuck to the name brand Philips hue lights. I connected the hub to my router and inserted the new lights throughout the house. The hub has a built-in API that one can interface to control the brightness, pigmentation, and state of groups of lights created within the Hue app. After grouping the lights to different rooms, I created a front end on the webserver. This would communicate with my PHP backend to send requests to the API. 
+
 ### Security
 
 * rf lock
