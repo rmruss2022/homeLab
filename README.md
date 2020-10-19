@@ -19,17 +19,42 @@ These specifications led me to a LAMP \(Linux, Apache, MySQL, PHP\) webserver. T
 
 ### Lighting
 
-* hue lights
-* php http curl requests
-* load, off/on, brightness, scene
+There are many options on the wifi lightbulb market, but I went with the name brand Philips hue lights. I connected the hub to my router and inserted the new lights throughout the house. The hub has a built-in API that one can interface to control the brightness, pigmentation, and state of groups of lights created within the Hue app. After grouping the lights to different rooms, I created a front end on the webserver. This would communicate with my PHP backend to send requests to the API. 
 
-There are many options on the wifi lightbulb market, but I stuck to the name brand Philips hue lights. I connected the hub to my router and inserted the new lights throughout the house. The hub has a built-in API that one can interface to control the brightness, pigmentation, and state of groups of lights created within the Hue app. After grouping the lights to different rooms, I created a front end on the webserver. This would communicate with my PHP backend to send requests to the API. 
+![](.gitbook/assets/img-8332.jpg)
+
+Built with HTML, CSS, and JavaScript, the front end enables one to turn the lights on/off with the lightbulb animation, adjust brightness with the slider, and select a pre-determined state \(menu pop up in the turquoise button\). 
+
+The front end communicates with the backend through JavaScript AJAX calls to PHP functions. Let's look at an example. Here, the page loads and needs to adjust the slider to the brightness of the light group.   
+
+```text
+$.ajax({
+        url:"/lighting/lightingPHP/getBri.php", 
+        data: { groupid: "8" }, //matthews room check bri
+        type: "GET",
+        context: document.body
+    }).done(function(result) {
+        sliderMatthew.value = result;
+    });
+```
+
+This AJAX calls getBri.php through its URL and takes an argument, the group ID. getBri then makes a call to the Hue API to understand the state of the brightness. 
+
+```text
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+```
+
+This PHP code is a basic cURL which returns the data from the Hue API URL specified with the group ID. The result is then parsed and returned. As per the AJAX code, the slider is then set to the value. All lighting functions are designed in a similar fashion whether that is loading the page, turning a group off/on, adjusting brightness, or selecting a scene. 
 
 ### Security
 
 * rf lock
 * rp4 flask api receives call from web server
 * circuit - optoisolator connects to remote to turn on button when signal received from api 
+
+To automate the security of my house, I first wanted to control my door lock. After researching different wifi solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I found a Radio Frequency Deadbolt that could be controlled from a small remote.   
 
 ### Thermostat
 
