@@ -98,7 +98,11 @@ While there are many smart thermostats on the market, I needed an API versatile 
 
 ![](.gitbook/assets/img-8357.jpg)
 
-This system could easily work by checking the current temperature against a hardcoded array of values, but I wanted to be able to change the set temperature at will. 
+This system could easily work by checking the current temperature against a hardcoded array of values, but I wanted to be able to change the set temperature from the web-server. This required further development of the Flask API and a front-end to select temperatures. 
+
+![](.gitbook/assets/img-8391.jpg)
+
+ The front end involves two sliders to dial the temperature and a set button which 
 
 ### Sensors
 
