@@ -56,7 +56,7 @@ To automate the security of my house, I first wanted to control my door lock. Af
 
 The remote button is activated when two pins are connected, so I soldered two wires to the respective pins \(blue and orange wires\) and connected the opposite end to an optoisolator on my breadboard. When the optoisolator receives power, \(red wire - white is connected to ground\) the connection between the output pins are completed, connecting the orange and blue wires and activating the remote to open the door. 
 
-The hardware is done, but this Pi needs to open a means of communication with the web-server. Therefore, I created a Flask API where I could receive requests and activate the remote. Flask is a micro web framework, perfect for my needs to send data back and forth. As seen in the front end image, the lock at the bottom of the screen sends an AJAX request.
+The hardware is done, but this Pi needs to open a means of communication with the web-server. Therefore, I created a python Flask API where I could receive requests and activate the remote. Flask is a micro web framework, perfect for my needs to send data back and forth. As seen in the front end image, the lock at the bottom of the screen sends an AJAX request.
 
 ```text
 $.ajax({
@@ -115,7 +115,42 @@ $.ajax({
 });
 ```
 
-The Flask API handles the POST by writing the specified temperature and time to a text file. Then the 
+The Flask API handles the POST by writing the specified temperature and time to a text file.
+
+```text
+class secFloorTemp_POST(Resource):
+    def get(self):
+        return getSecFloorTemp()
+    def post(self):
+        data = request.get_json()
+        current_time = datetime.datetime.now(pytz.timezone('America/New_York')).replace(tzinfo=None)
+        f = open("tempPost.txt", "w")
+        f.write(data["temperature"] + "\n")
+        f.write(str(current_time))
+        f.close()
+        return data
+```
+
+The Pi, when a GET request is made, now checks whether the set time is within one hour of the current time, and either turns the system off or on. If it is not within the hour period, the set temperature is a hardcoded value depending on the time of day. In the API, the function getSecFloorTemp\(\) returns the set temperature if within a one hour period, or -1 otherwise. 
+
+```text
+def getSecFloorTemp():
+    f = open("tempPost.txt", "r")
+    lines = f.readlines()
+    try:
+        post_time = datetime.datetime.strptime(lines[1], '%Y-%m-%d %H:%M:%S.%f')
+    except:
+        return -1
+    f.close()
+    current_time = datetime.datetime.now(pytz.timezone('America/New_York')).replace(tzinfo=None)
+    time_difference_sec = (current_time - post_time).seconds
+    if (time_difference_sec > 3600):
+        return -1
+    else:
+        return float(lines[0])
+```
+
+
 
 ### Sensors
 
