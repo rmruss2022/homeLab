@@ -102,7 +102,20 @@ This system could easily work by checking the current temperature against a hard
 
 ![](.gitbook/assets/img-8391.jpg)
 
- The front end involves two sliders to dial the temperature and a set button which 
+ The front end involves two sliders to dial the temperature and a set button which sends a POST request to the API. 
+
+```text
+$.ajax({
+    url: "http://192.168.6.37:5000/secFloorTemp", 
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify({"temperature" : temp }),
+    context: document.body
+}).done(function(result) {
+});
+```
+
+The Flask API handles the POST by writing the specified temperature and time to a text file. Then the 
 
 ### Sensors
 
