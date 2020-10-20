@@ -9,7 +9,7 @@ description: >-
 
 ### Introduction 
 
-Towards the end of my second year, I began an interest in the HomeLab subreddit. I wanted to learn more about networking and devlop a system I could experiment with new technologies. Unsure of where exactly to begin, I looked towards the most obvious and exciting option: home automation. Throughout the summer, I built open source solutions for lighting, temperature control, and security while learning about the psychological applications this data generates. 
+Towards the end of my second year, I began an interest in the HomeLab subreddit. I wanted to learn more about networking and develop a system I could experiment with new technologies. Unsure of where exactly to begin, I looked towards the most obvious and exciting option: home automation. Throughout the summer, I built open source solutions for lighting, temperature control, and security while learning about the psychological applications this data generates. 
 
 ### Stack
 
@@ -50,10 +50,6 @@ This PHP code is a basic cURL which returns the data from the Hue API URL specif
 
 ### Security
 
-* rf lock
-* rp4 flask api receives call from web server
-* circuit - optoisolator connects to remote to turn on button when signal received from api 
-
 To automate the security of my house, I first wanted to control my door lock. After researching different wifi solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I came across Morning Industry - they manufacture a Radio Frequency Deadbolt that could be controlled from a small remote. I theorized I could control the remote with my Raspberry Pi, but I had to create some circuit to interface between the two.  
 
 ![](.gitbook/assets/circuitimg.jpg)
@@ -73,7 +69,7 @@ $.ajax({
 });
 ```
 
-The AJAX code sends a get request to the Flask API: 
+The AJAX code sends a GET request to the Flask API: 
 
 ```text
 class smartlock(Resource):
@@ -98,7 +94,11 @@ Here the Pi sets a GPIO pin output to high and triggers the remote. In this way,
 * made calls to flask api to check if user set temperature within period of time
 * if no user temp, went off a hardcoded value
 
-While there are many smart thermostats on the market, I needed an API versatile enough to fit into my ecosystem. Unfortunately, I could not find a suitable candidate within a reasonable price range. Therefore, I was left to create my own. I researched the wiring for my AC system, and wiried a relay switch 
+While there are many smart thermostats on the market, I needed an API versatile enough to fit into my ecosystem. Unfortunately, I could not find a suitable candidate within a reasonable price range. I did however find many people using their Pi as a thermostat. I researched the wiring for my AC system and wired a relay switch to my unit. I connected my Pi and a DHT11 temperature sensor.  
+
+![](.gitbook/assets/img-8357.jpg)
+
+This system could easily work by checking the current temperature against a hardcoded array of values, but I wanted to be able to change the set temperature at will. 
 
 ### Sensors
 
@@ -126,15 +126,13 @@ Sensors connected to the door log activity entering/leaving to the MySQL databas
 
 
 
-## Psychology impliciations of Smart Home Data 
+## Psychology implications of Smart Home Data 
 
 I began my interest with smart home applications of a homelab. My goal was to aggregate data generated from within my own house and layer psychological principles to reach a greater understanding of some human behavior or cognition. After spending the summer reading about the implications of smart home technology in psychological research and building my own smart home \(with the intent of generating data for my own case study\), I have come to a greater understanding of this evolving technology's role in our daily lives, mental health, and medical needs.            
 
 ![](.gitbook/assets/psycstudy.png)
 
-## Limitations
-
-Before I discuss my findings, it is important to understand and respect the limitations of smart home technology for varying use cases. I live with three roommates, so when I started planning the technology to integrate into the house, I had to keep the privacy of my roommates in mind.      
+      
 
 
 
