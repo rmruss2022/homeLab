@@ -150,7 +150,21 @@ def getSecFloorTemp():
         return float(lines[0])
 ```
 
+The actual Python code within the thermostat Pi logically checks for the posted temperature and then the hardcoded value, turning the relay switch on or off:  
 
+```text
+postTemp = getPostTemp()
+currTemp = getCurTemp() 
+if postTemp != -1:
+        if postTemp < currTemp: # or type(temp) is dict:
+            relayON()
+        else:
+            relayOFF()
+    elif tempArr[current_hour] < currTemp:
+        relayON()
+    else:
+        relayOFF()
+```
 
 ### Sensors
 
