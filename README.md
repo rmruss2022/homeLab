@@ -156,19 +156,21 @@ The actual Python code within the thermostat Pi logically checks for the posted 
 postTemp = getPostTemp()
 currTemp = getCurTemp() 
 if postTemp != -1:
-        if postTemp < currTemp: # or type(temp) is dict:
+    if postTemp < currTemp: # or type(temp) is dict:
             relayON()
-        else:
-            relayOFF()
-    elif tempArr[current_hour] < currTemp:
-        relayON()
     else:
-        relayOFF()
+            relayOFF()
+elif tempArr[current_hour] < currTemp:
+    relayON()
+else:
+    relayOFF()
 ```
+
+This is how the Pi thermostat functions. It may not support AI climate control or geofencing like a Nest, but it is well within my needs and I learned a lot. 
 
 ### Sensors
 
-Sensors connected to the door log activity entering/leaving to the MySQL database.
+Sensors play a vital role in upgrading a home automation system from functioning to learning. Here we start to move away from the utalitarian aspects and focus on the behaviors we can quantify. On a surface level, sensors can tell us about the state of our home: moisture sensors can detect water leaks, motion sensors can tell us when the laundry is done, window and door sensors the security of the house, etc. This data quantifies the life of the house and is helpful to visualize 
 
 
 
