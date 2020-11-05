@@ -170,9 +170,9 @@ This is how the Pi thermostat functions. It may not support AI climate control o
 
 ### Sensors
 
-Sensors play a vital role in upgrading a home automation system from functioning to learning. Here we start to move away from the utalitarian aspects and focus on the behaviors we can quantify. On a surface level, sensors can tell us about the state of our home: moisture sensors can detect water leaks, motion sensors can tell us when the laundry is done, window and door sensors the security of the house, etc. This data quantifies the life of the house and is helpful to visualize 
+Sensors play a vital role in upgrading a home automation system from functioning to learning. Here we start to move away from the utilitarian aspects and focus on the behaviors we can quantify. On a surface level, sensors can tell us about the state of our home: moisture sensors can detect water leaks, motion sensors can tell us when the laundry is done, window and door sensors the security of the house, etc. This data quantifies the life of the house and is helpful to visualize how we interact with our environment.
 
-
+  I added two door sensors connected to a z-wave stick to monitor how frequently my roommates and I enter/leave the house. This data was then recorded on the LAMP MySQL backend. I was about to add motion sensors, RFID tags, and other devices to quantify behavior, but thought it was too much of an invasion of privacy. In the next section, I will how these IoT sensors allow us to understand our behavior without bias. This data can be used in seemingly unimaginable ways in the future of psychology. 
 
 {% tabs %}
 {% tab title="Lighting Front End" %}
@@ -200,7 +200,15 @@ I began my interest with smart home applications of a homelab. My goal was to ag
 
 ![](.gitbook/assets/psycstudy.png)
 
-      
+      The above picture relates different "assessment spaces." Interviews are first-person, active,  and in the laboratory, while smart home data is ecological,  passive, and third-person.
+
+### Social Physics
+
+Before we can understand the gravity of smart home data, I believe it is important to understand the larger picture the smart home fits into. This summer I read _Social Physics: How Social Networks Can Make Us Smarter_ by Alex Pentland. MIT's Dr. Pentland goes through his research and corporate experiments which harness consensual cell phone data and IoT sociometric sensors to monitor behavior. Social learning, or our ability to adapt to behaviors within communities, and idea flow, the extent to which our diverse network fosters new ideas, play central roles in the productivity and vitality of communities. 
+
+In Pentland's experiments, he tweaks the idea flow to improve the environment. Let's look at an example - In 2008 Alex and his team were contacted by Bank of America to improve their call center productivity by measuring the \(AHT\) average handle time of calls. 23 employees were fitted with sociometric badges and monitored for a month, and found the greatest predictor of success was interaction and high-level engagement. Now, by altering the coffee breaks from one person at a time to everyone, the AHT time decreased and saved the company approximately 15 million a year. 
+
+> "What we found was that engagment was the central predictor of productivity. Remeber that engagement is defined as idea flow within a work group; in this case, it was measured by computing the degree to which the work group members that each employee talks to also talk to each other. Controlling for all other factors, including length of employment and gender, workers who measured engagment was in the top third had productivity that measured more than 10 percent hgiher when compared to the typical employee. Thus, in this white collar operation, we again see that the concept of idea flow is key to understanding the relationship between productivity and interaction patterns. It appears that being in the loop allows employees to learn tricks of the trade-the kinds of tacit, detailed experience that seperates novices from experts-and is what keeps the idea machine efficiently ticking along."
 
 
 
