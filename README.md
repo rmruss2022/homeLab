@@ -168,6 +168,8 @@ else:
     relayOFF()
 ```
 
+![Dell server, router, switch, and pi](.gitbook/assets/mydellpic.jpg)
+
 This is how the Pi thermostat functions. It may not support AI climate control or geofencing like a Nest, but it is well within my needs and I learned a lot. 
 
 ### Sensors
