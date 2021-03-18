@@ -11,6 +11,8 @@ description: >-
 
 Towards the end of my second year, I began an interest in the HomeLab subreddit. I wanted to learn more about networking and develop a system I could experiment with new technologies. Unsure of where exactly to begin, I looked towards the most obvious and exciting option: home automation. Throughout the summer, I built open source solutions for lighting, temperature control, and security while learning about the psychological applications this data generates. 
 
+![Initial &apos;fantasy&apos; network design](.gitbook/assets/unnamed-1-.jpg)
+
 ### Stack
 
 There are many players in the home automation market offering their own nuanced ecosystem. Amazon, Google, and Apple offer top tier software, device compatibility, and voice assistant, but lack developer control. They are centralized services that work out of the box, and for most consumers, that is the best option. Open source services such as Home Assistant or OpenHab offer a plug and play format that offers high compatibility while also giving the user more control over the tech. These great solutions inspired the functionality and design I wanted out of my system.
@@ -200,7 +202,11 @@ I began my interest with smart home applications of a homelab. My goal was to ag
 
 ![](.gitbook/assets/psycstudy.png)
 
-      The above picture relates different "assessment spaces." Interviews are first-person, active,  and in the laboratory, while smart home data is ecological,  passive, and third-person. Citation - Nelson BW, and Allen NB. “Extending the Passive-Sensing Toolbox: Using Smart-Home Technology in Psychological Science.” Perspectives on Psychological Science : A Journal of the Association for Psychological Science, vol. 13, no. 6, 2018, pp. 718–733., doi:10.1177/1745691618776008.
+      The above picture relates different "assessment spaces." Interviews are first-person, active,  and in the laboratory, while smart home data is ecological,  passive, and third-person. 
+
+
+
+Citation - Nelson BW, and Allen NB. “Extending the Passive-Sensing Toolbox: Using Smart-Home Technology in Psychological Science.” Perspectives on Psychological Science : A Journal of the Association for Psychological Science, vol. 13, no. 6, 2018, pp. 718–733., doi:10.1177/1745691618776008.
 
 ### Social Physics
 
