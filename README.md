@@ -200,7 +200,7 @@ I began my interest with smart home applications of a homelab. My goal was to ag
 
 ![](.gitbook/assets/psycstudy.png)
 
-      The above picture relates different "assessment spaces." Interviews are first-person, active,  and in the laboratory, while smart home data is ecological,  passive, and third-person.
+      The above picture relates different "assessment spaces." Interviews are first-person, active,  and in the laboratory, while smart home data is ecological,  passive, and third-person. Citation - Nelson BW, and Allen NB. “Extending the Passive-Sensing Toolbox: Using Smart-Home Technology in Psychological Science.” Perspectives on Psychological Science : A Journal of the Association for Psychological Science, vol. 13, no. 6, 2018, pp. 718–733., doi:10.1177/1745691618776008.
 
 ### Social Physics
 
@@ -208,7 +208,7 @@ Before we can understand the gravity of smart home data, I believe it is importa
 
 In Pentland's experiments, he tweaks the idea flow to improve the environment. Let's look at an example - In 2008 Alex and his team were contacted by Bank of America to improve their call center productivity by measuring the \(AHT\) average handle time of calls. 23 employees were fitted with sociometric badges and monitored for a month, and found the greatest predictor of success was interaction and high-level engagement. Now, by altering the coffee breaks from one person at a time to everyone, the AHT time decreased and saved the company approximately 15 million a year. 
 
-> "What we found was that engagment was the central predictor of productivity. Remeber that engagement is defined as idea flow within a work group; in this case, it was measured by computing the degree to which the work group members that each employee talks to also talk to each other. Controlling for all other factors, including length of employment and gender, workers who measured engagment was in the top third had productivity that measured more than 10 percent hgiher when compared to the typical employee. Thus, in this white collar operation, we again see that the concept of idea flow is key to understanding the relationship between productivity and interaction patterns. It appears that being in the loop allows employees to learn tricks of the trade-the kinds of tacit, detailed experience that seperates novices from experts-and is what keeps the idea machine efficiently ticking along."
+> "What we found was that engagment was the central predictor of productivity. Remeber that engagement is defined as idea flow within a work group; in this case, it was measured by computing the degree to which the work group members that each employee talks to also talk to each other. Controlling for all other factors, including length of employment and gender, workers who measured engagment was in the top third had productivity that measured more than 10 percent hgiher when compared to the typical employee. Thus, in this white collar operation, we again see that the concept of idea flow is key to understanding the relationship between productivity and interaction patterns. It appears that being in the loop allows employees to learn tricks of the trade-the kinds of tacit, detailed experience that seperates novices from experts-and is what keeps the idea machine efficiently ticking along." - Social Physis: How Social Networks Can Make Us Smarter
 
 
 
