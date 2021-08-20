@@ -1,8 +1,8 @@
 ---
 description: >-
-  ATTENTION! Go to https://russellm22.gitbook.io/homelab/ for documentation!
-  Hello there! Welcome to Matt's homelab/automation documentation. I am a VT
-  student studying computer science and psychology.
+  Go to https://russellm22.gitbook.io/homelab/ for documentation. Hello there!
+  Welcome to Matt's homelab/automation documentation. I am a Virginia Tech Ugrad
+  studying Computer Science and Psychology.
 ---
 
 # Welcome to Matt's Home Automation!
@@ -19,7 +19,7 @@ These specifications led me to a LAMP \(Linux, Apache, MySQL, PHP\) webserver. T
 
 ### Lighting
 
-There are many options on the wifi lightbulb market, but I went with the name brand Philips hue lights. I connected the hub to my router and inserted the new lights throughout the house. The hub has a built-in API that one can interface to control the brightness, pigmentation, and state of groups of lights created within the Hue app. After grouping the lights to different rooms, I created a front end on the webserver. This would communicate with my PHP backend to send requests to the API. 
+There are many options on the WIFI lightbulb market, but I went with the name brand Philips hue lights. I connected the hub to my router and inserted the new lights throughout the house. The hub has a built-in API that one can interface to control the brightness, pigmentation, and state of groups of lights created within the Hue app. After grouping the lights to different rooms, I created a front end on the webserver. This would communicate with my PHP backend to send requests to the API. 
 
 ![](.gitbook/assets/img-8332.jpg)
 
@@ -50,7 +50,7 @@ This PHP code is a basic cURL which returns the data from the Hue API URL specif
 
 ### Security
 
-To automate the security of my house, I first wanted to control my door lock. After researching different wifi solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I came across Morning Industry - they manufacture a Radio Frequency Deadbolt that could be controlled from a small remote. I theorized I could control the remote with my Raspberry Pi, but I had to create some circuit to interface between the two.  
+To automate the security of my house, I first wanted to control my door lock. After researching different WIFI solutions, I found many required their own app and could not be easily integrated into my network with an API. However, I came across Morning Industry - they manufacture a Radio Frequency Deadbolt that could be controlled from a small remote. I theorized I could control the remote with my Raspberry Pi, but I had to create some circuit to interface between the two.  
 
 ![](.gitbook/assets/circuitimg.jpg)
 
@@ -91,7 +91,7 @@ Here the Pi sets a GPIO pin output to high and triggers the remote. In this way,
 ### Thermostat
 
 * rp4 with temperature sensor wired to the ac
-* made calls to flask api to check if user set temperature within period of time
+* made calls to flask API to check if user set temperature within period of time
 * if no user temp, went off a hardcoded value
 
 While there are many smart thermostats on the market, I needed an API versatile enough to fit into my ecosystem. Unfortunately, I could not find a suitable candidate within a reasonable price range. I did however find many people using their Pi as a thermostat. I researched the wiring for my AC system and wired a relay switch to my unit. I connected my Pi and a DHT11 temperature sensor.  
@@ -174,7 +174,7 @@ This is how the Pi thermostat functions. It may not support AI climate control o
 
 Sensors play a vital role in upgrading a home automation system from functioning to learning. Here we start to move away from the utilitarian aspects and focus on the behaviors we can quantify. On a surface level, sensors can tell us about the state of our home: moisture sensors can detect water leaks, motion sensors can tell us when the laundry is done, window and door sensors the security of the house, etc. This data quantifies the life of the house and is helpful to visualize how we interact with our environment.
 
-  I added two door sensors connected to a z-wave stick to monitor how frequently my roommates and I enter/leave the house. This data was then recorded on the LAMP MySQL backend. I was about to add motion sensors, RFID tags, and other devices to quantify behavior, but thought it was too much of an invasion of privacy. In the next section, I will how these IoT sensors allow us to understand our behavior without bias. This data can be used in seemingly unimaginable ways in the future of psychology. 
+  I added two door sensors connected to a z-wave stick to monitor how frequently my roommates and I enter/leave the house. This data was then recorded on the MySQL database. I was about to add motion sensors, RFID tags, and other devices to quantify behavior, but thought it was too much of an invasion of privacy. In the next section, I will show how these IoT sensors allow us to understand our behavior without bias. This data can be used in seemingly unimaginable ways in the future of psychology. 
 
 {% tabs %}
 {% tab title="Lighting Front End" %}
@@ -214,7 +214,7 @@ Before we can understand the gravity of smart home data, I believe it is importa
 
 In Pentland's experiments, he tweaks the idea flow to improve the environment. Let's look at an example - In 2008 Alex and his team were contacted by Bank of America to improve their call center productivity by measuring the \(AHT\) average handle time of calls. 23 employees were fitted with sociometric badges and monitored for a month, and found the greatest predictor of success was interaction and high-level engagement. Now, by altering the coffee breaks from one person at a time to everyone, the AHT time decreased and saved the company approximately 15 million a year. 
 
-> "What we found was that engagment was the central predictor of productivity. Remeber that engagement is defined as idea flow within a work group; in this case, it was measured by computing the degree to which the work group members that each employee talks to also talk to each other. Controlling for all other factors, including length of employment and gender, workers who measured engagment was in the top third had productivity that measured more than 10 percent hgiher when compared to the typical employee. Thus, in this white collar operation, we again see that the concept of idea flow is key to understanding the relationship between productivity and interaction patterns. It appears that being in the loop allows employees to learn tricks of the trade-the kinds of tacit, detailed experience that seperates novices from experts-and is what keeps the idea machine efficiently ticking along." - Social Physis: How Social Networks Can Make Us Smarter
+> "What we found was that engagement was the central predictor of productivity. Remember that engagement is defined as idea flow within a work group; in this case, it was measured by computing the degree to which the work group members that each employee talks to also talk to each other. Controlling for all other factors, including length of employment and gender, workers who measured engagement was in the top third had productivity that measured more than 10 percent higher when compared to the typical employee. Thus, in this white collar operation, we again see that the concept of idea flow is key to understanding the relationship between productivity and interaction patterns. It appears that being in the loop allows employees to learn tricks of the trade-the kinds of tacit, detailed experience that separates novices from experts-and is what keeps the idea machine efficiently ticking along." - Social Physics: How Social Networks Can Make Us Smarter
 
 ![Initial Design](.gitbook/assets/unnamed-1-.jpg)
 
